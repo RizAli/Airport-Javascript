@@ -3,7 +3,11 @@ describe ('Airport', function(){
 
   beforeEach(function() {
     airport = new Airport();
-    plane = new Plane();
+    // plane = new Plane();
+    plane = jasmine.createSpyObj('plane', ['land', 'takeoff']);
+
+
+
   });
 
   it ('should have no planes when created', function(){
@@ -23,5 +27,6 @@ describe ('Airport', function(){
     airport.takeOff();
     expect(airport.planes).toEqual([]);
   });
+
 
 });
