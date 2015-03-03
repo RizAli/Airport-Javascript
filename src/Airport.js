@@ -1,7 +1,15 @@
-function Song() {
-}
+var Airport = function(){
+  this.planes = [];
+};
 
-Song.prototype.persistFavoriteStatus = function(value) {
-  // something complicated
-  throw new Error("not yet implemented");
+Airport.prototype.planeCount = function(){
+  this.planes = [];
+};
+
+Airport.prototype.park = function(plane){
+  this.planes.push(plane);
+};
+
+Airport.prototype.takeOff = function(plane){
+  this.planes.splice(plane);
 };
